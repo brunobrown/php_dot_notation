@@ -88,7 +88,7 @@ class DotNotation
      *
      * Obs.: Se o caminho ou chave não existir no array, o mesmo será criado e o valor configurado.
      *
-     * @arrayData
+     * @param array $arrayData
      * 	Propriedade ou variável que contém o array.
      *
      * @param string $arrayPath
@@ -96,16 +96,20 @@ class DotNotation
      *      Exemplos:
      *          'path1.path2.path3'
      *
-     *      Obs.: Para acessar um array composto basta especificar seu index. Exemplo: 'path1.path2.path3.2'
-     *      [
-     *          'path1' => '',
-     *          'path2' => '',
-     *          'path3' => [
-     *              ['item1'],
-     *              ['item2'],
-     *              ['item3']
+     *      Obs.: Para acessar um array composto basta especificar seu index.
+     *      Exemplo: 'path1.path2.path3.1'
+     *
+     *          [
+     *              'path1' => [
+     *                  'path2' => [
+     *                      'path3' => [
+     *                          ['item1'],
+     *                          ['item2'],
+     *                          ['item3']
+     *                      ]
+     *                  ]
+     *              ]
      *          ]
-     *      ]
      *
      * @return mixed
      * 	O valor lido ou array com o novo valor configurado.
