@@ -27,14 +27,17 @@ Ao ler valores, você obterá `null` para chaves ou valores não existentes.
         Exemplo:
             'path1.path2.path3'
     
-        Obs.: Para acessar um array composto basta especificar seu index. Exemplo: 'path1.path2.path3.2'
+        Obs.: Para acessar um array composto basta especificar seu index.
+        Exemplo: 'path1.path2.path3.1'
           
-        [
-            'path1' => '',
-            'path2' => '',
-            'path3' => [
-                ['item1'],
-                ['item2'],
-                ['item3']
+            [
+                'path1' => [
+                    'path2' => [
+                        'path3' => [
+                            ['item1'],
+                            ['item2'],
+                            ['item3']
+                        ]
+                    ]
+                ]
             ]
-        ]
